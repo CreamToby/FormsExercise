@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+<body>
+        <form>
+        <!-- fieldset 1 -->
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+            
+            <!-- store number -->
+            <label type="storeNumber">Store Number</label>
+            <select name="storeNumber" id="storeNumber">
+                <option hidden>Select A Store</option>
+                <option value="2421">2421</option>
+                <option value="3109">3109</option>
+                <option value="5357">5357</option>
+            </select>
+
+            <!-- fieldset 2 -->
+            <fieldset>
+                <legend>When you visited</legend>
+                <!-- input date visited -->
+                <label for="dateVisited">Date Visited</label>
+                <input type="date" name="date" id="dateVisited" value="2022" min="2022-01-01" max="2022-12-31"> 
+                <br>
+                
+                <!-- input time -->
+                <label for="time">Time</label>
+                <input type="time" id="time">
+            </fieldset>
+        
+            <!-- input fullname -->
+            <form>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Name">
+            </form>
+            <br>
+            <!-- input email -->
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" placeholder="Email">
+            
+            <!-- fieldset3 -->
+            <fieldset>
+                <legend>How would you rate your level of satisfaction with your visit?</legend>
+                <!-- radio -->
+                <input type="radio" name="radioLink" id="one">
+                <label for="one">Satisfied</label>
+                <br>
+                <input type="radio" name="radioLink" id="two" checked>
+                <label for="two">Neither Satisfied nor Dissatisfied</label>
+                <br>
+                <input type="radio" name="radioLink" id="three">
+                <label for="three">Dissatisfied</label>
+            </fieldset>
+
+            <!-- textarea 1 -->
+            <label for="survey">Tell us about your experience:</label>
+            <br>
+            <textarea name="survey" id="survey" cols="20" rows="2"></textarea>
+            <br>
+
+            <!-- input visit time -->
+            <label for="number">Times visited in the last month</label>
+            <br>
+            <input type="number" id="number" min="1" max="30">
+            <br>
+
+            <!-- input agree -->
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Please check the box if you would be willing to be contacted about your experience</label>    
+            <br>    
+            <!-- password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="5" maxlength="10" pattern="{5},{10}" title="Please enter a password that is 5 to 10 characters in length">
+            <br>
+            <!-- reset -->
+            <input type="reset">
+            <!-- submit -->
+            <input type="submit">
+    
+        </fieldset>
+            
+    </form>
+</body>
+</html>
