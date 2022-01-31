@@ -13,7 +13,7 @@
             <legend>Customer Experience Survey</legend>
             
             <!-- store number -->
-            <label type="storeNumber">Store Number</label>
+            <label for="storeNumber">Store Number</label>
             <select name="storeNumber" id="storeNumber">
                 <option hidden>Select A Store</option>
                 <option value="2421">2421</option>
@@ -23,26 +23,26 @@
 
             <!-- fieldset 2 -->
             <fieldset>
-                <legend>When you visited</legend>
+                <legend>When you visited:</legend>
                 <!-- input date visited -->
-                <label for="dateVisited">Date Visited</label>
-                <input type="date" name="date" id="dateVisited" value="2022" min="2022-01-01" max="2022-12-31"> 
+                <label for="date">Date Visited</label>
+                <input type="date" name="date" id="date" min="2022-01-01" max="2022-12-31"> 
                 <br>
                 
                 <!-- input time -->
                 <label for="time">Time</label>
-                <input type="time" id="time">
+                <input type="time" id="time" name="time">
             </fieldset>
         
             <!-- input fullname -->
-            <form>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" placeholder="Name">
-            </form>
+            
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Name" name="name">
+            
             <br>
             <!-- input email -->
-            <label for="userEmail">Email:</label>
-            <input type="email" id="userEmail" placeholder="Email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email">
             
             <!-- fieldset3 -->
             <fieldset>
@@ -59,24 +59,24 @@
             </fieldset>
 
             <!-- textarea 1 -->
-            <label for="survey">Tell us about your experience:</label>
+            <label for="experience">Tell us about your experience:</label>
             <br>
-            <textarea name="survey" id="survey" cols="20" rows="2"></textarea>
+            <textarea name="experience" id="experience" cols="20" rows="2"></textarea>
             <br>
 
             <!-- input visit time -->
             <label for="number">Times visited in the last month</label>
             <br>
-            <input type="number" id="number" min="1" max="30">
+            <input type="number" id="times" name="times" min="1" max="30">
             <br>
 
             <!-- input agree -->
-            <input type="checkbox" id="agree" required>
-            <label for="agree">Please check the box if you would be willing to be contacted about your experience</label>    
+            <input type="checkbox" id="contact" name="contact" required>
+            <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>    
             <br>    
             <!-- password -->
-            <label for="password">Password</label>
-            <input type="password" id="password" minlength="5" maxlength="10" pattern="[a-z0-9_%]{5,10}" title="Please enter a password that is 5 to 10 characters in length">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length">
             <br>
             <!-- reset -->
             <input type="reset">
@@ -84,7 +84,6 @@
             <input type="submit">
     
         </fieldset>
-            
     </form>
 </body>
 </html>
